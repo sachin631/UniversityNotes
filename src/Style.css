@@ -1,0 +1,94 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*................ Homepage component styling............... */
+
+#bgcolor{
+    background-color: crimson;
+}
+#homepagemain{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ....................subjects component styling.................. */
+
+#bgcolorsubject{
+    width: 100%;
+    height: 100%;
+    background-color: crimson;
+}
+#subjectmaindiv{
+    width: 33.333%;
+    height: 100%;
+    background-color: crimson;
+    display: inline-block;
+    padding-top:5%;
+    padding-left: 5%;
+    row-gap: 2%;
+    float: left;
+    text-align: center;
+    /* display: grid; */
+    /* grid-template-rows: 205px 205px; */
+    /* grid-template-columns: 405px 405px 405px; */
+    
+}
+#subjectmaindiv:hover{
+    transform: scale(1.02);
+}
+
+/*............ PFPS component styling.................. */
+
+#pfpsmaindiv{
+    width: 100vw;
+    height: 100vh;
+    /* font-size: 80px; */
+    background-color:peachpuff;
+}
+#pfpstitle{
+    /* display:inline-block; */
+    font-size: xx-large;
+    color: darkblue;
+    text-align: center;
+    padding-top: 2%;
+    
+}
+.h1subject{
+    text-decoration: none;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 5%;
+    color: black;
+}
+.h1subject:hover{
+        background-color: crimson;
+}
+.link{
+    text-decoration: none;
+    /* color: black; */
+}
+
+
+
+/* media query for screen 762 or less */
+
+@media(max-width:762px){
+
+    #subjectmaindiv{
+        width: 100%;
+        height: 100%;
+        padding-left: 2%;
+    }
+    .h1subject{
+        font-size: x-large;
+    }
+}
+
+

@@ -1,0 +1,50 @@
+1> transform :scale(1.02)
+   //above property of css is used to add get up effect on the card component after hover
+
+2>
+    to add multiple component in single path then just add it after another use react fragments 
+
+3>
+    card styling problem solved by float left,mainly it is dependent on width each component get equal width
+    now we have need to set width at 33.33% and used media query for mobile phone at 762
+
+4>
+    why i am not able to pass props to <Link to={props.url}>NEXT</Link> in Reactjs  
+    i am create a card then from that single card i acces 9 card just by
+    call it again and again i.e <card/><card/>.... and there is a next
+    button in that card ,when i click that button i want to go at new
+    component each time but when i pass props to <LINK
+    to={props.url}>NEXT</LINK> then subject component(main component of card)
+    is dissapper and nothing show
+
+    solution: the error is that we can not pass props from each card,
+    i.e error=> 
+    <Route  path="/Subjects" element={<>
+        <Subjects url="/Subjects/physics" title="Physics" content="Click NEXT BUTTON to access Physics Notes and study Material"  img="/images/homepagepic.jpg"/>
+        <Subjects  img="/images/homepagepic.jpg" title="CHEMISTRY" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="MATHS" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="ENGLISH" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="PFPS" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="Workshop Technology" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="MATHS II" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="BEE" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+        <Subjects  img="/images/homepagepic.jpg" title="MATHS III" content="Click NEXT BUTTON to access Physics Notes and study Material"/></>}/>
+.....above we pass url to only one subject we have to pass it to all
+    i.e solution=>
+    <Route  path="/Subjects" element={<>
+      <Subjects url="/Subjects/physics" title="Physics" content="Click NEXT BUTTON to access Physics Notes and study Material"  img="/images/homepagepic.jpg"/> 
+      <Subjects url="/Subjects/chemistry" img="/images/homepagepic.jpg" title="CHEMISTRY" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+      <Subjects url="/Subjects/Maths" img="/images/homepagepic.jpg" title="MATHS" content="Click NEXT BUTTON to access Physics Notes and study Material"/> 
+      <Subjects url="/Subjects/English" img="/images/homepagepic.jpg" title="ENGLISH" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+      <Subjects url="/Subjects/pfps" img="/images/homepagepic.jpg" title="PFPS" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+      <Subjects url="/Subjects/workshoptechnology" img="/images/homepagepic.jpg" title="Workshop Technology" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+      <Subjects url="/Subjects/mathsII" img="/images/homepagepic.jpg" title="MATHS II" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+      <Subjects url="/Subjects/bee" img="/images/homepagepic.jpg" title="BEE" content="Click NEXT BUTTON to access Physics Notes and study Material"/>
+      <Subjects url="/Subjects/mathsIII" img="/images/homepagepic.jpg" title="MATHS III" content="Click NEXT BUTTON to access Physics Notes and study Material"/></>}/>
+
+    we have needto pass the props(url) to each its card(child) to access it
+
+
+    when we want to import a file from src to folder inside src then write like that ../api
+
+    
